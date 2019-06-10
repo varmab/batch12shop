@@ -5,9 +5,8 @@ import './App.css';
 import Welcome from './Welcome'
 import Title from './Title'
 import Counter from './Counter'
-import Todos from './Todos'
-
-
+import Friends from './Friends'
+import GreetingCard from './GreetingCard';
 
 class App extends Component{
   render(){
@@ -18,7 +17,7 @@ class App extends Component{
           <Welcome year={2019}/>
           <Welcome name="Rani" year={2019}/>
         </header>
-        <Todos/>
+        <GreetingCard/>
       </div>
     )
   };
