@@ -1,5 +1,14 @@
 import React, {Component} from 'react'
 
+const Friend=(props)=>{
+    return (<div>
+                <img src="someimage.png"></img>
+                {props.name}
+                {props.children}
+                <p>Birth Date:{props.dateOfBirth}</p>
+            </div>)
+}
+
 class Friends extends Component{
     constructor(){
         super();
@@ -9,21 +18,13 @@ class Friends extends Component{
         }
     }
 
-    deleteFriend=(friend)=>{
-        this.setState({
-            friends:this.state.friends.filter((f)=>{
-                return f!=friend;
-            })
-        })
-    }
-
     render(){
         return(
             <div>
                 <ul>
                     {
                         this.state.friends.map((friend)=>{
-                            return <li key={friend}>{friend}<button onClick={()=>{ this.deleteFriend(friend);}}>Delete</button></li>
+                            return (<Friend name={friend}>Thank you</Friend>)
                         })
                     }
                 </ul>

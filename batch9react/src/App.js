@@ -7,6 +7,7 @@ import Title from './Title'
 import Counter from './Counter'
 import Friends from './Friends'
 import GreetingCard from './GreetingCard';
+import Users from './Users'
 
 class App extends Component{
   render(){
@@ -17,7 +18,7 @@ class App extends Component{
           <Welcome year={2019}/>
           <Welcome name="Rani" year={2019}/>
         </header>
-        <GreetingCard/>
+        <Users/>
       </div>
     )
   };
