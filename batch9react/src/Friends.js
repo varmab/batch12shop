@@ -16,15 +16,20 @@ class Friends extends Component{
         }
     }
 
+    getFriendsList=()=>{
+        var friends=''
+        this.state.friends.forEach(function(friend,index){
+            friends=friends+friend;
+         })
+         console.log(friends)
+        return friends;
+    }
+
     render(){
         return(
             <div>
                 <ul>
-                    {
-                        this.state.friends.map((friend,index)=>{
-                            return (<Friend key={index} name={friend}>Thank you</Friend>)
-                        })
-                    }
+                    {this.getFriendsList}
                 </ul>
             </div>
         )

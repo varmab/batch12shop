@@ -1,12 +1,18 @@
 import React, {Component} from 'react';
 
 class Counter extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state={
-            count:0
+            count:props.count
         }
+    }
+
+    componentWillReceiveProps(newProps){
+        this.setState({
+            count:newProps.count
+        })
     }
 
     increment=()=>{

@@ -26,7 +26,7 @@ class Library extends Component{
         }
     }
 
-    addToWishlist=(book)=>{
+    addToWishlistOfLibrary=(book)=>{
         console.log(book)
         this.setState({
             wishlist:[
@@ -41,7 +41,7 @@ class Library extends Component{
             <div>
                 <h1>Library</h1>
                 <p>My wishlist:{this.state.wishlist.length}</p>
-                <BookList books={this.state.books} addToWishlist={this.addToWishlist}/>
+                <BookList books={this.state.books} addToWishlist1={this.addToWishlistOfLibrary}/>
             </div>
         )
     }

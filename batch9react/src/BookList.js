@@ -10,9 +10,9 @@ class BookList extends Component{
         }
     }
 
-    addToWishlist=(book)=>{
+    addToWishlistOfBooklist=(book)=>{
         console.log(book)
-        this.props.addToWishlist(book);
+        this.props.addToWishlist1(book);
     }
 
     render(){
@@ -21,7 +21,7 @@ class BookList extends Component{
                 <h1>BookList</h1>
                 {
                     this.state.books.map((book)=>{
-                        return <Book key={book.id} book={book} addToWishlist={this.addToWishlist}/>
+                        return <Book key={book.id} book={book} addToWishlist2={this.addToWishlistOfBooklist}/>
                     })
                 }
             </div>
